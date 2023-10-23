@@ -3,18 +3,15 @@
 namespace Module1_AssignmentB.entity
 {
     public class Teacher : Person, iface.ITalkable
-    {
-        private int age;
-        
+    {        
         public int Age
         {
-            get => age;
-            set => age = value; 
+            get; set;
         }
 
         public Teacher(int age, String name) : base(name)
         {
-            this.age = age;
+            Age = age;
         }
 
         public String Talk()
@@ -24,7 +21,7 @@ namespace Module1_AssignmentB.entity
 
         public override string ToString()
         {
-            return "Teacher: " + "name=" + Name + " age=" + age;
+            return "Teacher: " + "name=" + Name + " age=" + Age;
         }
     }
 }

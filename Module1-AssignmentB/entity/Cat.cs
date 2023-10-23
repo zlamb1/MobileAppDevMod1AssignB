@@ -3,18 +3,15 @@
 namespace Module1_AssignmentB.entity
 {
     public class Cat : Pet, ITalkable
-    {
-        private int mousesKilled;
-        
+    {        
         public int MousesKilled
         {
-            get => mousesKilled;
-            set => mousesKilled = value;
+            get; set;
         }
 
         public Cat(int mousesKilled, String name) : base(name)
         {
-            this.mousesKilled = mousesKilled;
+            MousesKilled = mousesKilled;
         }
 
         public String Talk()
@@ -24,7 +21,7 @@ namespace Module1_AssignmentB.entity
 
         public override String ToString()
         {
-            return "Cat: " + "name=" + name + " mousesKilled=" + mousesKilled;
+            return "Cat: " + "name=" + Name + " mousesKilled=" + MousesKilled;
         }
     }
 }

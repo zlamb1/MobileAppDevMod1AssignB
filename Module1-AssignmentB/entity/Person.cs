@@ -2,17 +2,14 @@
 {
     public abstract class Person
     {
-        private String name;
-
         public String Name
         {
-            get => name;
-            set => name = value;
+            get; set;
         }
 
         public Person(String name)
         {
-            this.name = name;
+            Name = name;
         }
     }
 }

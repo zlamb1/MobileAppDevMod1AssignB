@@ -4,16 +4,14 @@ namespace Module1_AssignmentB.entity
 {
     public class Dog : Pet, ITalkable
     {
-        private bool friendly;
-
         public bool Friendly
         {
-            get => friendly;
+            get; set;
         }
 
         public Dog(bool friendly, String name) : base(name)
         {
-            this.friendly = friendly;
+            Friendly = friendly;
         }
 
         public String Talk()
@@ -23,7 +21,7 @@ namespace Module1_AssignmentB.entity
 
         public override String ToString()
         {
-            return "Dog: " + "name=" + name + " friendly=" + friendly;
+            return "Dog: " + "name=" + Name + " friendly=" + Friendly;
         }
     }
 }
